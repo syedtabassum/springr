@@ -15,6 +15,7 @@ footer {
   left: 0;
   display: none;
   box-shadow: 0 -2px 9px rgb(145, 145, 145);
+  z-index: 3;
 }
 footer .burger {
   height: 5vh;
@@ -278,10 +279,11 @@ hr {
     transform: translateX(-100%);
     height: 90vh;
     transition: all 0.3s ease-in-out;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 90px;
     box-shadow: 2px 0 5px rgb(173, 173, 173);
+    z-index: 2;
   }
   .menu-active {
     transform: translateX(0%);
@@ -318,7 +320,7 @@ hr {
 }
 
 /* ...........................................RESPONSIVE AT 768PX.................. */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
   section {
     height: auto;
   }
@@ -339,7 +341,7 @@ hr {
     height: 100vh;
     transition: all 0.3s ease-in-out;
     z-index: 3;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 60px;
   }
@@ -356,40 +358,97 @@ hr {
   footer {
     display: block;
   }
+} */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  section {
+    height: auto;
+  }
+  .menu {
+    margin-left: unset;
+  }
+  .info {
+    flex-direction: column;
+  }
+  .content,
+  .picture {
+    margin-top: 5rem;
+  }
+  .set-2 {
+    margin-left: -4rem;
+  }
+  .social {
+    margin-top: 10rem;
+  }
+  .item {
+    margin-bottom: 4rem;
+  }
+  .description {
+    padding: 2rem;
+  }
+  hr {
+    width: 20rem;
+  }
 }
-/* @media screen and (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 768px) {
   section {
     height: auto;
   }
   main {
     height: auto;
-    grid-template-columns: 0.3fr 0.5fr 0.6fr 0.5fr 0.3fr;
-    grid-template-rows: 0.2fr 0.4fr 0.4fr;
+    grid-template-columns: 0.6fr 0.4fr 0.4fr;
+    grid-template-rows: 0.4fr 1.5fr 1fr 0.9fr;
     grid-template-areas:
-      "nav nav nav nav nav"
-      "menu profile profile reach reach"
-      "menu  description description description description";
-    overflow: hidden;
+      "nav nav nav nav"
+      "menu profile profile profile"
+      "menu reach reach reach"
+      "menu  description description description";
   }
-  .reach {
-    padding: 2rem 0rem;
+  .menu {
+    margin-left: unset;
   }
   hr {
-    width: 24rem;
+    width: 20rem;
   }
-} */
-
-@media (max-width: 280px) {
+  .profile {
+    padding-top: 7rem;
+  }
+  .description {
+    margin: unset;
+    padding: unset;
+  }
+}
+@media (min-width: 279px) and (max-width: 280px) {
+  section {
+    height: auto;
+  }
   main {
     height: auto;
-    width: 100vw;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.4fr 0.4fr 0.4fr;
+    grid-template-rows: 0.1fr 0.3fr 0.3fr 0.3fr;
     grid-template-areas:
       "nav"
       "profile"
-      "description"
-      "reach";
-    overflow: hidden;
+      "reach"
+      "description";
+  }
+  .info {
+    flex-direction: column;
+  }
+  .picture {
+    margin: unset;
+  }
+  .profile {
+    padding: 1rem 0rem;
+  }
+  .reach {
+    padding: unset;
+    margin: unset;
+  }
+  .description {
+    margin-bottom: 3rem;
+  }
+  hr {
+    width: 15rem;
   }
 }
