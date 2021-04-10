@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: none;
+  box-shadow: 0 -2px 9px rgb(145, 145, 145);
+}
+footer .burger {
+  height: 5vh;
+  width: 100vw;
+  background-color: #f2f2f2;
+  padding: 0.6rem 0 0.5rem 2rem;
+}
+footer .fa-bars {
+  color: #3e2c74;
+}
+/* ......................assigning font family............... */
+.item h3 {
+  font-weight: 400;
+}
+.item h4 {
+  font-weight: 900;
+}
+/* ....................video animation.......... */
+.video {
+  animation: blink 1.3s infinite ease-in-out;
+}
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* ...................navigation section............ */
+nav .logo {
+  width: 8rem;
+  height: 3rem;
+}
+nav .icon-pic {
+  width: 2.9rem;
+  height: 2.9rem;
+}
+.dot-active {
+  position: relative;
+}
+.active {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(1, 211, 1);
+  position: absolute;
+  bottom: 0px;
+  left: 18px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  background-color: #ffffff;
+  box-shadow: inset 0 -0.5rem 0.5rem rgb(243, 243, 243);
+  grid-area: nav;
+}
+
+/* ..................layout.............. */
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.6fr 0.6fr 0.5fr 1fr;
+  grid-template-rows: 0.4fr 1.5fr 1fr 0.9fr;
+  grid-gap: 0.7rem;
+  grid-template-areas:
+    "nav nav nav nav"
+    "menu profile profile reach"
+    "menu profile profile reach"
+    "menu  description description description";
+}
+
+.menu,
+.profile,
+.reach,
+.description {
+  background-color: #ffffff;
+  border-radius: 0.4rem;
+}
+
+.menu {
+  grid-area: menu;
+  margin: 0rem 0rem 1rem 1rem;
+}
+.profile {
+  grid-area: profile;
+}
+.reach {
+  grid-area: reach;
+  margin-right: 1rem;
+}
+.description {
+  grid-area: description;
+  margin: 0 1rem 1rem 0rem;
+}
+
+/* ..................menu section............... */
+.links {
+  padding: 2rem;
+}
+.link {
+  display: flex;
+  margin: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #474a52;
+}
+.link img {
+  height: 1.4rem;
+  width: 1.4rem;
+  margin: 0rem 1rem 0rem 0rem;
+}
+#active {
+  font-weight: 700;
+  background-image: linear-gradient(to top, #8f8bfc, #b173fc);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* ................profile section................ */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 0rem 2rem;
+}
+.info {
+  display: flex;
+}
+.profile h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.content .tag {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #7a858b;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.picture {
+  margin: 0 1rem 0 -2rem;
+  height: 12rem;
+  width: 12rem;
+}
+.rating img {
+  height: 3rem;
+  width: 9rem;
+  margin-left: -1rem;
+}
+.rating,
+.price,
+.follow-section,
+.class-section {
+  display: flex;
+}
+.follow-section {
+  margin-bottom: 1rem;
+}
+.content p {
+  margin-top: 0.5rem;
+}
+.price {
+  margin-top: 1.3rem;
+}
+.price h5 {
+  background-color: #f3f7f9;
+  padding: 0.4rem;
+  margin-left: 0.7rem;
+  color: #3b3e42;
+}
+.rating h5 {
+  margin-top: 1rem;
+}
+hr {
+  height: 1px;
+  width: 32rem;
+  background-color: #f2f2f2;
+  margin-top: 1rem;
+}
+.set-2 h4 {
+  margin-top: 0.5rem;
+}
+.follow-section img {
+  height: 2.1rem;
+  width: 2.1rem;
+  margin-right: 2rem;
+}
+.class-section img {
+  height: 1.9rem;
+  width: 1.9rem;
+  margin-right: 2rem;
+}
+.set-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 0 0;
+}
+/* ................................social event section................. */
+.item img {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-right: 1rem;
+}
+.reach {
+  padding: 2rem 2rem;
+}
+.item {
+  display: flex;
+  padding: 1rem;
+  background-color: #f4f5f5;
+  margin: 1.5rem 1.5rem;
+  border-radius: 0.4rem;
+  position: relative;
+  color: #303138;
+}
+.balance h4 {
+  position: absolute;
+  right: 1.5rem;
+  color: #81ca9e;
+}
+
+/* ................................description section................ */
+
+.description p {
+  padding: 2rem;
+  color: #7a7e86;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+/* .............................responsive..................... */
+
+@media screen and (max-width: 550px) {
+  section {
+    height: auto;
+  }
+  main {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.4fr 0.4fr 0.4fr;
+    grid-template-areas:
+      "nav"
+      "profile"
+      "description"
+      "reach";
+    overflow: hidden;
+  }
+  .menu {
+    margin: 0 0 0 0rem;
+    transform: translateX(-100%);
+    height: 90vh;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 90px;
+    box-shadow: 2px 0 5px rgb(173, 173, 173);
+  }
+  .menu-active {
+    transform: translateX(0%);
+  }
+
+  .profile {
+    padding: 1rem;
+  }
+  nav {
+    padding: 1rem 1rem;
+    width: 100vw;
+  }
+  nav .logo {
+    height: 2rem;
+    width: 5rem;
+  }
+  .picture {
+    height: 8rem;
+    width: 8rem;
+  }
+  hr {
+    width: 20rem;
+  }
+  .reach {
+    margin: 0 0 3rem 0rem;
+  }
+
+  .description {
+    margin: 0rem 0rem 0 0rem;
+  }
+  footer {
+    display: block;
+  }
+}
+
+/* ...........................................RESPONSIVE AT 768PX.................. */
+@media (min-width: 768px) and (max-width: 1024px) {
+  section {
+    height: auto;
+  }
+  main {
+    height: auto;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 0.2fr 0.9fr 0.9fr 0.4fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      "profile profile reach reach"
+      "profile profile reach reach"
+      "description description description description";
+    overflow: hidden;
+  }
+  .menu {
+    margin: 0 0 0 0rem;
+    transform: translateX(-100%);
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 60px;
+  }
+  .menu-active {
+    transform: translateX(0%);
+  }
+  .picture {
+    height: 9.4rem;
+    width: 9.4rem;
+  }
+  hr {
+    width: 19rem;
+  }
+  footer {
+    display: block;
+  }
+}
+/* @media screen and (max-width: 1024px) {
+  section {
+    height: auto;
+  }
+  main {
+    height: auto;
+    grid-template-columns: 0.3fr 0.5fr 0.6fr 0.5fr 0.3fr;
+    grid-template-rows: 0.2fr 0.4fr 0.4fr;
+    grid-template-areas:
+      "nav nav nav nav nav"
+      "menu profile profile reach reach"
+      "menu  description description description description";
+    overflow: hidden;
+  }
+  .reach {
+    padding: 2rem 0rem;
+  }
+  hr {
+    width: 24rem;
+  }
+} */
+
+@media (max-width: 280px) {
+  main {
+    height: auto;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.4fr 0.4fr 0.4fr;
+    grid-template-areas:
+      "nav"
+      "profile"
+      "description"
+      "reach";
+    overflow: hidden;
+  }
+}
