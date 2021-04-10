@@ -319,47 +319,6 @@ hr {
   }
 }
 
-/* ...........................................RESPONSIVE AT 768PX.................. */
-/* @media (min-width: 768px) and (max-width: 1024px) {
-  section {
-    height: auto;
-  }
-  main {
-    height: auto;
-    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
-    grid-template-rows: 0.2fr 0.9fr 0.9fr 0.4fr;
-    grid-template-areas:
-      "nav nav nav nav"
-      "profile profile reach reach"
-      "profile profile reach reach"
-      "description description description description";
-    overflow: hidden;
-  }
-  .menu {
-    margin: 0 0 0 0rem;
-    transform: translateX(-100%);
-    height: 100vh;
-    transition: all 0.3s ease-in-out;
-    z-index: 3;
-    position: fixed;
-    left: 0;
-    top: 60px;
-  }
-  .menu-active {
-    transform: translateX(0%);
-  }
-  .picture {
-    height: 9.4rem;
-    width: 9.4rem;
-  }
-  hr {
-    width: 19rem;
-  }
-  footer {
-    display: block;
-  }
-} */
-
 @media (min-width: 769px) and (max-width: 1024px) {
   section {
     height: auto;
